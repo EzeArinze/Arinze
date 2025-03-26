@@ -20,7 +20,7 @@ export default function Home() {
       }`}
     >
       {/* Navigation Overlay */}
-      <Navigation menuOpen={menuOpen} onClick={() => setMenuOpen(!menuOpen)} />
+      <Navigation menuOpen={menuOpen} onClick={() => setMenuOpen(false)} />
 
       {/* Header */}
       <Header menuOpen={menuOpen} onClick={() => setMenuOpen(!menuOpen)} />
@@ -28,19 +28,14 @@ export default function Home() {
       <main>
         {/* Hero Section */}
         <Herosection />
-
         {/* About Section */}
         <About />
-
         {/* Projects Section */}
         <ProjectSection />
-
         {/* Skills Section */}
         <SkillsSection />
-
         {/* Contact Section */}
         <Contact />
-
         {/* Footer */}
         <Footer />
       </main>

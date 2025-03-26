@@ -10,7 +10,7 @@ interface NavigationProps {
 function Navigation({ menuOpen, onClick }: NavigationProps) {
   return (
     <div
-      className={`fixed inset-0 bg-white z-50 transition-transform duration-700 ease-in-out ${
+      className={`fixed inset-0 bg-white z-40 transition-transform duration-700 ease-in-out ${
         menuOpen ? "translate-y-0" : "translate-x-full"
       }`}
     >

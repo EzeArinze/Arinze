@@ -1,7 +1,8 @@
 import { AnimatePresence, motion } from "motion/react";
 import React, { useRef } from "react";
-import { Button } from "../ui/button";
+import { buttonVariants } from "../ui/button";
 import { HeroScene } from "../hero-scene";
+import Link from "next/link";
 
 function Herosection() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -36,12 +37,15 @@ function Herosection() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="mt-12"
             >
-              <Button
-                variant="outline"
-                className="rounded-none border-neutral-300 text-sm uppercase tracking-widest px-8 py-6 hover:bg-black hover:text-white transition-all duration-300"
+              <Link
+                // variant="outline"
+                href={"#projects"}
+                className={`${buttonVariants({
+                  variant: "outline",
+                })} rounded-none border-neutral-300 text-sm uppercase tracking-widest px-8 py-6 hover:bg-black hover:text-white transition-all duration-300`}
               >
                 View Projects
-              </Button>
+              </Link>
             </motion.div>
           </motion.div>
         </AnimatePresence>
