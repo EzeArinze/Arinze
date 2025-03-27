@@ -5,11 +5,8 @@
 
 // function ProjectSection() {
 //   return (
-//     <section
-//       id="projects"
-//       className="py-32 md:py-40 bg-white container relative"
-//     >
-//       <div className="">
+//     <section id="projects" className="py-32 md:py-40 bg-white">
+//       <div className="container relative">
 //         <motion.div
 //           initial={{ opacity: 0, y: 40 }}
 //           whileInView={{ opacity: 1, y: 0 }}
@@ -34,25 +31,18 @@
 
 // export default ProjectSection;
 
-"use client"; // Ensure it's a client component
+"use client"; // Ensure this is a Client Component
 
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import React from "react";
 import { ProjectItem } from "../project-items";
 import { projects } from "@/utils/projects";
 
 function ProjectSection() {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) return null; // Prevents hydration mismatches
-
   return (
-    <section id="projects" className="relative py-32 md:py-40 bg-white">
-      <div className="container relative">
+    <section id="projects" className="py-32 md:py-40 bg-white">
+      {/* ✅ Ensure container has 'relative' position */}
+      <div className="container mx-auto px-6 relative">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

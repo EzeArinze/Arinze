@@ -105,7 +105,7 @@
 
 "use client";
 
-// import { useRef } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -126,21 +126,23 @@ interface ProjectItemProps {
 }
 
 export function ProjectItem({ project, index }: ProjectItemProps) {
-  // Create a ref for the image container
-  // const imageRef = useRef<HTMLDivElement>(null);
+  // Prevents hydration mismatch
+  const [isMounted, setIsMounted] = useState(false);
 
-  // Get the scroll progress for the image container
-  // const { scrollYProgress } = useScroll({
-  //   target: imageRef,
-  //   offset: ["start end", "end start"],
-  // });
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
-  // Map the scroll progress to vertical translation and opacity values
-  // const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
-  // const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+  if (!isMounted) return null; // Prevents hydration errors in production
 
   return (
-    <div className="relative group">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: 0.1 }}
+      className="group"
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
         {/* Text Content */}
         <div
@@ -153,10 +155,12 @@ export function ProjectItem({ project, index }: ProjectItemProps) {
                 {project.year}
               </span>
             </div>
+
             <h3 className="text-3xl font-light">{project.title}</h3>
             <p className="text-lg font-light text-neutral-700">
               {project.description}
             </p>
+
             <div className="flex flex-wrap gap-2 pt-4">
               {project.tags.map((tag) => (
                 <span
@@ -167,6 +171,7 @@ export function ProjectItem({ project, index }: ProjectItemProps) {
                 </span>
               ))}
             </div>
+
             <motion.div whileHover={{ x: 10 }} transition={{ duration: 0.3 }}>
               <Link
                 href="#"
@@ -179,13 +184,13 @@ export function ProjectItem({ project, index }: ProjectItemProps) {
           </div>
         </div>
 
-        {/* Image with Scroll-Based Animation */}
+        {/* ✅ Fix Image Layout Issue */}
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className={`relative h-[50vh] overflow-hidden  rounded ${
+          className={`relative h-[50vh] w-full md:w-auto overflow-hidden rounded ${
             index % 2 === 0 ? "md:order-1" : "md:order-2"
           }`}
         >
@@ -194,11 +199,11 @@ export function ProjectItem({ project, index }: ProjectItemProps) {
             alt={project.title}
             fill
             priority
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover transition-transform duration-700 group-hover:scale-105 rounded"
           />
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
