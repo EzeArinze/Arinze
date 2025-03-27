@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { ArrowUpRight } from "lucide-react";
 
@@ -23,13 +23,13 @@ interface ProjectItemProps {
 
 export function ProjectItem({ project, index }: ProjectItemProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: ref,
+  //   offset: ["start end", "end start"],
+  // });
 
-  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+  // const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
+  // const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   return (
     <motion.div
@@ -81,8 +81,11 @@ export function ProjectItem({ project, index }: ProjectItemProps) {
         </div>
 
         <motion.div
-          style={{ y, opacity }}
-          className={`relative h-[50vh] overflow-hidden ${
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.1 * index }}
+          className={`relative h-[50vh] overflow-hidden  rounded ${
             index % 2 === 0 ? "md:order-1" : "md:order-2"
           }`}
         >
