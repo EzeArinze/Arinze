@@ -34,12 +34,22 @@
 
 // export default ProjectSection;
 
+"use client"; // Ensure it's a client component
+
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import React from "react";
 import { ProjectItem } from "../project-items";
 import { projects } from "@/utils/projects";
 
 function ProjectSection() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null; // Prevents hydration mismatches
+
   return (
     <section id="projects" className="relative py-32 md:py-40 bg-white">
       <div className="container relative">
