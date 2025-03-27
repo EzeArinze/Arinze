@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import React from "react";
 import { ProjectItem } from "../project-items";
 import { projects } from "@/utils/projects";

@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useRef } from "react";
 import { buttonVariants } from "../ui/button";
 import { HeroScene } from "../hero-scene";
