@@ -90,7 +90,9 @@ export function ProjectItem({ project, index }: ProjectItemProps) {
             src={project.image || "/placeholder.svg"}
             alt={project.title}
             fill
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover transition-transform duration-700 group-hover:scale-105 rounded"
           />
         </motion.div>
       </div>
