@@ -9,7 +9,7 @@ interface HeaderProps {
 
 function Header({ menuOpen, onClick }: HeaderProps) {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 py-6 px-6 md:px-12 bg-[#f8f8f8]/80 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 py-6 px-6 md:px-12 bg-[#f8f8f8]/90 backdrop-blur-sm">
       <div className="flex justify-between items-center">
         <Link href="/" className="text-xl font-light tracking-widest">
           NUEL
