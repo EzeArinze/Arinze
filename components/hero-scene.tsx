@@ -57,7 +57,7 @@ export function HeroScene() {
         <OrbitControls
           enableZoom={false}
           enablePan={false}
-          enableRotate={true}
+          enableRotate={false}
           autoRotate={true}
           autoRotateSpeed={0.5}
         />

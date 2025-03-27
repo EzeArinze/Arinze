@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+// import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -22,7 +22,7 @@ interface ProjectItemProps {
 }
 
 export function ProjectItem({ project, index }: ProjectItemProps) {
-  const ref = useRef<HTMLDivElement>(null);
+  // const ref = useRef<HTMLDivElement>(null);
   // const { scrollYProgress } = useScroll({
   //   target: ref,
   //   offset: ["start end", "end start"],
@@ -33,11 +33,11 @@ export function ProjectItem({ project, index }: ProjectItemProps) {
 
   return (
     <motion.div
-      ref={ref}
+      // ref={ref}
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.8, delay: 0.1 * index }}
+      transition={{ duration: 0.8, delay: 0.1 }}
       className="group"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
@@ -84,7 +84,7 @@ export function ProjectItem({ project, index }: ProjectItemProps) {
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.1 * index }}
+          transition={{ duration: 0.8, delay: 0.1 }}
           className={`relative h-[50vh] overflow-hidden  rounded ${
             index % 2 === 0 ? "md:order-1" : "md:order-2"
           }`}
