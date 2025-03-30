@@ -4,7 +4,7 @@ import React from "react";
 
 function Contact() {
   return (
-    <section id="contact" className="py-32 md:py-40 bg-white">
+    <section id="contact" className="py-32 md:py-40 bg-card">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <motion.div
@@ -16,7 +16,7 @@ function Contact() {
             <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-12">
               Contact
             </h2>
-            <div className="space-y-6 text-lg font-light text-neutral-700">
+            <div className="space-y-6 text-lg font-light text-muted-foreground">
               <p>
                 I&apos;m currently available for freelance work and new
                 opportunities. If you have a project that needs some creative
@@ -38,7 +38,7 @@ function Contact() {
                   href="mailto:hello@nuel.dev"
                   className="flex items-center space-x-4 py-2"
                 >
-                  <div className="w-2 h-2 rounded-full bg-neutral-300 group-hover:bg-primary transition-colors duration-300" />
+                  <div className="w-2 h-2 rounded-full bg-muted group-hover:bg-primary transition-colors duration-300" />
                   <span className="text-lg font-light group-hover:text-primary transition-colors duration-300">
                     hello@nuel.dev
                   </span>
@@ -51,7 +51,7 @@ function Contact() {
                 className="group"
               >
                 <Link href="#" className="flex items-center space-x-4 py-2">
-                  <div className="w-2 h-2 rounded-full bg-neutral-300 group-hover:bg-primary transition-colors duration-300" />
+                  <div className="w-2 h-2 rounded-full bg-muted group-hover:bg-primary transition-colors duration-300" />
                   <span className="text-lg font-light group-hover:text-primary transition-colors duration-300">
                     LinkedIn
                   </span>
@@ -64,7 +64,7 @@ function Contact() {
                 className="group"
               >
                 <Link href="#" className="flex items-center space-x-4 py-2">
-                  <div className="w-2 h-2 rounded-full bg-neutral-300 group-hover:bg-primary transition-colors duration-300" />
+                  <div className="w-2 h-2 rounded-full bg-muted group-hover:bg-primary transition-colors duration-300" />
                   <span className="text-lg font-light group-hover:text-primary transition-colors duration-300">
                     GitHub
                   </span>
@@ -77,7 +77,7 @@ function Contact() {
                 className="group"
               >
                 <Link href="#" className="flex items-center space-x-4 py-2">
-                  <div className="w-2 h-2 rounded-full bg-neutral-300 group-hover:bg-primary transition-colors duration-300" />
+                  <div className="w-2 h-2 rounded-full bg-muted group-hover:bg-primary transition-colors duration-300" />
                   <span className="text-lg font-light group-hover:text-primary transition-colors duration-300">
                     Twitter
                   </span>
@@ -91,7 +91,7 @@ function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative h-[50vh] bg-neutral-100"
+            className="relative h-[50vh] bg-muted"
           >
             <div className="absolute inset-0 flex items-center justify-center text-6xl">
               ✉️

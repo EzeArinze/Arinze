@@ -27,7 +27,7 @@ function Herosection() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight leading-none mb-6">
               Frontend Developer
             </h1>
-            <p className="text-lg md:text-xl font-light tracking-wide text-neutral-700 max-w-xl">
+            <p className="text-lg md:text-xl font-light tracking-wide text-muted-foreground max-w-xl">
               Creating exceptional digital experiences with modern web
               technologies and a focus on detail.
             </p>
@@ -58,8 +58,8 @@ function Herosection() {
         transition={{ duration: 0.8, delay: 1 }}
       >
         <div className="flex flex-col items-center">
-          <div className="w-[1px] h-16 bg-neutral-300 mb-4 animate-pulse" />
-          <span className="text-xs uppercase tracking-widest text-neutral-500">
+          <div className="w-[1px] h-16 bg-muted mb-4 animate-pulse" />
+          <span className="text-xs uppercase tracking-widest text-muted-foreground">
             Scroll to explore
           </span>
         </div>

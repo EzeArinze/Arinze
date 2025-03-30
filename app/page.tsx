@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div
-      className={`min-h-screen bg-[#f8f8f8] ${
+      className={`min-h-screen  bg-background ${
         menuOpen ? "overflow-hidden" : ""
       }`}
     >

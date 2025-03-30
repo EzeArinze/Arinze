@@ -36,9 +36,9 @@ function SkillsSection() {
                   "Tailwind CSS",
                 ].map((skill) => (
                   <div key={skill} className="group">
-                    <div className="flex justify-between items-center py-4 border-b border-neutral-200">
+                    <div className="flex justify-between items-center py-4 border-b border-border">
                       <span className="text-lg font-light">{skill}</span>
-                      <div className="w-2 h-2 rounded-full bg-neutral-300 group-hover:bg-primary transition-colors duration-300" />
+                      <div className="w-2 h-2 rounded-full bg-muted group-hover:bg-primary transition-colors duration-300" />
                     </div>
                   </div>
                 ))}
@@ -51,9 +51,9 @@ function SkillsSection() {
                 {["Supabase", "MongoDB", "Auth.js", "Better Auth"].map(
                   (skill) => (
                     <div key={skill} className="group">
-                      <div className="flex justify-between items-center py-4 border-b border-neutral-200">
+                      <div className="flex justify-between items-center py-4 border-b border-border">
                         <span className="text-lg font-light">{skill}</span>
-                        <div className="w-2 h-2 rounded-full bg-neutral-300 group-hover:bg-primary transition-colors duration-300" />
+                        <div className="w-2 h-2 rounded-full bg-muted group-hover:bg-primary transition-colors duration-300" />
                       </div>
                     </div>
                   )
@@ -72,16 +72,14 @@ function SkillsSection() {
             <div>
               <h3 className="text-2xl font-light mb-8">Tools & Platforms</h3>
               <div className="space-y-4">
-                {["Git", "Vercel", "Netlify", "Figma", "VS Code"].map(
-                  (skill) => (
-                    <div key={skill} className="group">
-                      <div className="flex justify-between items-center py-4 border-b border-neutral-200">
-                        <span className="text-lg font-light">{skill}</span>
-                        <div className="w-2 h-2 rounded-full bg-neutral-300 group-hover:bg-primary transition-colors duration-300" />
-                      </div>
+                {["Git", "Vercel", "Netlify"].map((skill) => (
+                  <div key={skill} className="group">
+                    <div className="flex justify-between items-center py-4 border-b border-border">
+                      <span className="text-lg font-light">{skill}</span>
+                      <div className="w-2 h-2 rounded-full bg-muted group-hover:bg-primary transition-colors duration-300" />
                     </div>
-                  )
-                )}
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -95,9 +93,9 @@ function SkillsSection() {
                   "CMS Integration",
                 ].map((skill) => (
                   <div key={skill} className="group">
-                    <div className="flex justify-between items-center py-4 border-b border-neutral-200">
+                    <div className="flex justify-between items-center py-4 border-b border-border">
                       <span className="text-lg font-light">{skill}</span>
-                      <div className="w-2 h-2 rounded-full bg-neutral-300 group-hover:bg-primary transition-colors duration-300" />
+                      <div className="w-2 h-2 rounded-full bg-muted group-hover:bg-primary transition-colors duration-300" />
                     </div>
                   </div>
                 ))}

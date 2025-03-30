@@ -1,12 +1,16 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { ProjectItem } from "../project-items";
+// import { ProjectItem } from "../project-items";
 import { projects } from "@/utils/projects";
+import { ProjectGrid } from "../project-grid";
+import { ProjectCard } from "../project-card";
 
 function ProjectSection() {
+  const useGridLayout = true;
+
   return (
-    <section id="projects" className="py-32 md:py-40 bg-white">
-      <div className="container relative">
+    <section id="projects" className="py-32 md:py-40 bg-card">
+      <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -19,11 +23,15 @@ function ProjectSection() {
           </h2>
         </motion.div>
 
-        <div className="space-y-40">
-          {projects.map((project, index) => (
-            <ProjectItem key={project.id} project={project} index={index} />
-          ))}
-        </div>
+        {useGridLayout ? (
+          <ProjectGrid projects={projects} />
+        ) : (
+          <div>
+            {projects.map((project, index) => (
+              <ProjectCard key={project.id} project={project} index={index} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

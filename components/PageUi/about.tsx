@@ -15,7 +15,7 @@ function About() {
             <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-12">
               About
             </h2>
-            <div className="space-y-6 text-lg font-light text-neutral-700">
+            <div className="space-y-6 text-lg font-light text-muted-foreground">
               <p>
                 I&apos;m a passionate software developer specializing in
                 frontend technologies with a strong foundation in modern
@@ -40,7 +40,7 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative h-[70vh] bg-neutral-100"
+            className="relative h-[70vh] bg-muted rounded"
           >
             <div className="absolute inset-0 flex items-center justify-center text-6xl">
               👨‍💻
