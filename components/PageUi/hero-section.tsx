@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useRef } from "react";
+import React from "react";
 import { buttonVariants } from "../ui/button";
 // import { HeroScene } from "../hero-scene";
 import Link from "next/link";
