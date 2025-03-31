@@ -40,19 +40,19 @@ function Navigation({ menuOpen, onClick }: NavigationProps) {
           transition={{ duration: 0.5, delay: menuOpen ? 0.6 : 0 }}
         >
           <Link
-            href="#"
+            href="linkedin.com/in/eze-arinze-arz"
             className="text-sm uppercase tracking-widest hover:text-primary transition-colors duration-300"
           >
             LinkedIn
           </Link>
           <Link
-            href="#"
+            href="https://github.com/EzeArinze"
             className="text-sm uppercase tracking-widest hover:text-primary transition-colors duration-300"
           >
             GitHub
           </Link>
           <Link
-            href="#"
+            href="https://x.com/Emmanuelrinz2"
             className="text-sm uppercase tracking-widest hover:text-primary transition-colors duration-300"
           >
             Twitter

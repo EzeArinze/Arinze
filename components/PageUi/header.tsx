@@ -16,7 +16,6 @@ function Header({ menuOpen, onClick }: HeaderProps) {
           NUEL
         </Link>
         <div className="flex items-center gap-4">
-          {/* <ThemeToggle /> */}
           <ThemeToggle />
           <button
             onClick={onClick}

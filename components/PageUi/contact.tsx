@@ -35,7 +35,7 @@ function Contact() {
                 className="group"
               >
                 <Link
-                  href="mailto:hello@nuel.dev"
+                  href="mailto:hello@ezearinze2244@gmail.com"
                   className="flex items-center space-x-4 py-2"
                 >
                   <div className="w-2 h-2 rounded-full bg-muted group-hover:bg-primary transition-colors duration-300" />
@@ -50,7 +50,10 @@ function Contact() {
                 transition={{ duration: 0.3 }}
                 className="group"
               >
-                <Link href="#" className="flex items-center space-x-4 py-2">
+                <Link
+                  href="linkedin.com/in/eze-arinze-arz"
+                  className="flex items-center space-x-4 py-2"
+                >
                   <div className="w-2 h-2 rounded-full bg-muted group-hover:bg-primary transition-colors duration-300" />
                   <span className="text-lg font-light group-hover:text-primary transition-colors duration-300">
                     LinkedIn
@@ -63,7 +66,10 @@ function Contact() {
                 transition={{ duration: 0.3 }}
                 className="group"
               >
-                <Link href="#" className="flex items-center space-x-4 py-2">
+                <Link
+                  href="https://github.com/EzeArinze"
+                  className="flex items-center space-x-4 py-2"
+                >
                   <div className="w-2 h-2 rounded-full bg-muted group-hover:bg-primary transition-colors duration-300" />
                   <span className="text-lg font-light group-hover:text-primary transition-colors duration-300">
                     GitHub
@@ -76,7 +82,10 @@ function Contact() {
                 transition={{ duration: 0.3 }}
                 className="group"
               >
-                <Link href="#" className="flex items-center space-x-4 py-2">
+                <Link
+                  href="https://x.com/Emmanuelrinz2"
+                  className="flex items-center space-x-4 py-2"
+                >
                   <div className="w-2 h-2 rounded-full bg-muted group-hover:bg-primary transition-colors duration-300" />
                   <span className="text-lg font-light group-hover:text-primary transition-colors duration-300">
                     Twitter
