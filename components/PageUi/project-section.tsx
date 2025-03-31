@@ -9,7 +9,7 @@ function ProjectSection() {
 
   return (
     <section id="projects" className="py-32 md:py-40 bg-card ">
-      <div className="container relative">
+      <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ function ProjectSection() {
         {useGridLayout ? (
           <ProjectGrid projects={projects} />
         ) : (
-          <div className="relative">
+          <div>
             {projects.map((project, index) => (
               <ProjectItem key={project.id} project={project} index={index} />
             ))}
