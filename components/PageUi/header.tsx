@@ -1,4 +1,4 @@
-import { ModeToggle } from "@/hooks/toggle";
+import { ThemeToggle } from "@/hooks/toggle";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -17,7 +17,7 @@ function Header({ menuOpen, onClick }: HeaderProps) {
         </Link>
         <div className="flex items-center gap-4">
           {/* <ThemeToggle /> */}
-          <ModeToggle />
+          <ThemeToggle />
           <button
             onClick={onClick}
             className="z-50 flex items-center space-x-2 group"

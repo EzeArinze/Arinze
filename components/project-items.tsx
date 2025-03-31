@@ -138,7 +138,7 @@ export function ProjectItem({ project, index }: ProjectItemProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, delay: 0.1 * index }}
-      className="group"
+      className="group relative"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
         <div
@@ -191,6 +191,7 @@ export function ProjectItem({ project, index }: ProjectItemProps) {
             alt={project.title}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
+            priority
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
         </motion.div>

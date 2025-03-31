@@ -9,7 +9,7 @@ function ProjectSection() {
 
   return (
     <section id="projects" className="py-32 md:py-40 bg-card ">
-      <div className="container">
+      <div className="container relative">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
