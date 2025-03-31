@@ -2,7 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/hooks/theme-provider";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
