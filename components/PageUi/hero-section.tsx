@@ -1,20 +1,20 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useRef } from "react";
 import { buttonVariants } from "../ui/button";
-import { HeroScene } from "../hero-scene";
+// import { HeroScene } from "../hero-scene";
 import Link from "next/link";
 
 function Herosection() {
-  const heroRef = useRef<HTMLDivElement>(null);
+  // const heroRef = useRef<HTMLDivElement>(null);
 
   return (
     <section
-      ref={heroRef}
+      // ref={heroRef}
       className="relative h-screen flex items-center overflow-hidden"
     >
-      <div className="absolute inset-0 z-10">
+      {/* <div className="absolute inset-0 z-10">
         <HeroScene />
-      </div>
+      </div> */}
 
       <div className="container relative z-20">
         <AnimatePresence>
