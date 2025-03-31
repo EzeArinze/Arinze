@@ -9,6 +9,7 @@ import Herosection from "@/components/PageUi/hero-section";
 import About from "@/components/PageUi/about";
 import ProjectSection from "@/components/PageUi/project-section";
 import Navigation from "@/components/PageUi/navigation";
+import PhilosophySection from "@/components/PageUi/philosophy-section";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,6 +35,9 @@ export default function Home() {
         <ProjectSection />
         {/* Skills Section */}
         <SkillsSection />
+
+        {/* Philosophy Section */}
+        <PhilosophySection />
         {/* Contact Section */}
         <Contact />
         {/* Footer */}
