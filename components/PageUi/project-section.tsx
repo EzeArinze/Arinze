@@ -24,7 +24,9 @@ function ProjectSection() {
         </motion.div>
 
         {useGridLayout ? (
-          <ProjectGrid projects={projects} />
+          <div className="relative">
+            <ProjectGrid projects={projects} />
+          </div>
         ) : (
           <div>
             {projects.map((project, index) => (

@@ -25,7 +25,11 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {projects.map((project) => (
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
           key={project.id}
           className="group relative flex flex-col overflow-hidden rounded-lg"
           onMouseEnter={() => setHoveredId(project.id)}
@@ -36,6 +40,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
               src={project.image || "/placeholder.svg"}
               alt={project.title}
               fill
+              priority
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-500 group-hover:scale-110"
             />
@@ -85,7 +90,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
               </Link>
             </motion.div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
