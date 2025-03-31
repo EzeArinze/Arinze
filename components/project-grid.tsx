@@ -24,13 +24,9 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {projects.map((project, index) => (
-        <motion.div
+      {projects.map((project) => (
+        <div
           key={project.id}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
           className="group relative flex flex-col overflow-hidden rounded-lg"
           onMouseEnter={() => setHoveredId(project.id)}
           onMouseLeave={() => setHoveredId(null)}
@@ -89,7 +85,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
               </Link>
             </motion.div>
           </div>
-        </motion.div>
+        </div>
       ))}
     </div>
   );
