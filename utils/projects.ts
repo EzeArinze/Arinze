@@ -1,29 +1,60 @@
 export const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Lynzhair",
     description:
-      "A full-featured online store with cart functionality, user authentication, and payment processing.",
+      "Lynzhair. A full-featured online store with cart functionality, user authentication, admin-dashboard, and payment processing.",
     year: "2023",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
-    image: "/huy.jpg",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Mongo db",
+      "react-query",
+      "cloudinary",
+      "zustand",
+    ],
+    image: "/lynzhair.png",
   },
   {
     id: 2,
-    title: "Content Management System",
+    title: "Hotel Management System",
     description:
-      "Custom CMS solution for managing blog posts, pages, and digital assets with role-based permissions.",
-    year: "2022",
-    tags: ["React", "MongoDB", "Auth.js", "TypeScript"],
-    image: "/huy.jpg",
+      "The-wild-oasis A hotel management web app that can only be accessed by the hotel employee.",
+    year: "2023",
+    tags: [
+      "React",
+      "Supabase",
+      "Supabase Auth",
+      "JavaScript",
+      "React-Hook-Form",
+      "styled-component",
+    ],
+    image: "/wild2.png",
   },
   {
     id: 3,
-    title: "Task Management App",
+    title: "Media Hub",
     description:
-      "Collaborative task management tool with real-time updates, notifications, and team workspaces.",
+      "Collaborative music management tool to save your playlist, create playlist from your spotify and other music platform.",
     year: "2022",
-    tags: ["Next.js", "Tailwind CSS", "Better Auth", "Supabase"],
-    image: "/huy.jpg",
+    tags: ["React", "CSS", "Auth", "spotify API"],
+    image: "/MediaHub.png",
+  },
+  {
+    id: 1,
+    title: "Timeless-interior-home",
+    description:
+      "Timeless-interior-home. A full-featured online store with cart functionality, user authentication, Sanity CMS, and payment processing.",
+    year: "2023",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Sanity CMS",
+      "zustand",
+      "Kinde-auth",
+    ],
+    image: "/timelesshome.png",
   },
 ];
