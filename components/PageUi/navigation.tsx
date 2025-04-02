@@ -41,18 +41,21 @@ function Navigation({ menuOpen, onClick }: NavigationProps) {
         >
           <Link
             href="linkedin.com/in/eze-arinze-arz"
+            target="_blank"
             className="text-sm uppercase tracking-widest hover:text-primary transition-colors duration-300"
           >
             LinkedIn
           </Link>
           <Link
             href="https://github.com/EzeArinze"
+            target="_blank"
             className="text-sm uppercase tracking-widest hover:text-primary transition-colors duration-300"
           >
             GitHub
           </Link>
           <Link
             href="https://x.com/Emmanuelrinz2"
+            target="_blank"
             className="text-sm uppercase tracking-widest hover:text-primary transition-colors duration-300"
           >
             Twitter

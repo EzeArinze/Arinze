@@ -35,7 +35,8 @@ function Contact() {
                 className="group"
               >
                 <Link
-                  href="mailto:hello@ezearinze2244@gmail.com"
+                  href="mailto:ezearinze2244@gmail.com"
+                  target="_blank"
                   className="flex items-center space-x-4 py-2"
                 >
                   <div className="w-2 h-2 rounded-full bg-muted group-hover:bg-primary transition-colors duration-300" />
@@ -52,6 +53,7 @@ function Contact() {
               >
                 <Link
                   href="linkedin.com/in/eze-arinze-arz"
+                  target="_blank"
                   className="flex items-center space-x-4 py-2"
                 >
                   <div className="w-2 h-2 rounded-full bg-muted group-hover:bg-primary transition-colors duration-300" />
@@ -68,6 +70,7 @@ function Contact() {
               >
                 <Link
                   href="https://github.com/EzeArinze"
+                  target="_blank"
                   className="flex items-center space-x-4 py-2"
                 >
                   <div className="w-2 h-2 rounded-full bg-muted group-hover:bg-primary transition-colors duration-300" />
@@ -84,6 +87,7 @@ function Contact() {
               >
                 <Link
                   href="https://x.com/Emmanuelrinz2"
+                  target="_blank"
                   className="flex items-center space-x-4 py-2"
                 >
                   <div className="w-2 h-2 rounded-full bg-muted group-hover:bg-primary transition-colors duration-300" />

@@ -13,7 +13,9 @@ export const projects = [
       "react-query",
       "cloudinary",
       "zustand",
+      "Paystack",
     ],
+    link: "https://lynzhair.vercel.app/",
     image: "/lynzhair.png",
   },
   {
@@ -30,6 +32,7 @@ export const projects = [
       "React-Hook-Form",
       "styled-component",
     ],
+    link: "https://the-wild-oasis-omega-fawn.vercel.app/",
     image: "/wild2.png",
   },
   {
@@ -39,10 +42,11 @@ export const projects = [
       "Collaborative music management tool to save your playlist, create playlist from your spotify and other music platform.",
     year: "2022",
     tags: ["React", "CSS", "Auth", "spotify API"],
+    link: "https://group-13-host.vercel.app/",
     image: "/MediaHub.png",
   },
   {
-    id: 1,
+    id: 4,
     title: "Timeless-interior-home",
     description:
       "Timeless-interior-home. A full-featured online store with cart functionality, user authentication, Sanity CMS, and payment processing.",
@@ -54,7 +58,9 @@ export const projects = [
       "Sanity CMS",
       "zustand",
       "Kinde-auth",
+      "Paystack",
     ],
-    image: "/timelesshome.png",
+    link: "https://timeless-home-style.vercel.app/",
+    image: "/timelesshome1.png",
   },
 ];

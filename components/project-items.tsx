@@ -13,6 +13,7 @@ interface Project {
   year: string;
   tags: string[];
   image: string;
+  link: string;
 }
 
 interface ProjectItemProps {
@@ -69,7 +70,8 @@ export function ProjectItem({ project, index }: ProjectItemProps) {
 
             <motion.div whileHover={{ x: 10 }} transition={{ duration: 0.3 }}>
               <Link
-                href="#"
+                href={project?.link}
+                target="_blank"
                 className="inline-flex items-center space-x-2 text-sm uppercase tracking-widest group-hover:text-primary transition-colors duration-300"
               >
                 <span>View Project</span>
@@ -91,7 +93,7 @@ export function ProjectItem({ project, index }: ProjectItemProps) {
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             priority
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
+            className="object-cover transition-transform duration-700 group-hover:scale-105 rounded"
           />
         </motion.div>
       </div>
