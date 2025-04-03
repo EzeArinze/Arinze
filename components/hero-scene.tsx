@@ -1,77 +1,53 @@
 "use client";
 
-import { useRef } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, Environment, Float } from "@react-three/drei";
-import { useTheme } from "next-themes";
-import type * as THREE from "three";
+import { Canvas, useFrame } from "@react-three/fiber";
+import * as THREE from "three";
+import { OrbitControls, Points } from "@react-three/drei";
+import { useRef, useMemo } from "react";
 
-function CustomGeometry() {
-  const meshRef = useRef<THREE.Mesh>(null);
-  const { viewport } = useThree();
-  // const { theme } = useTheme();
+// Particles Animation
+function ParticleSystem() {
+  const pointsRef = useRef<THREE.Points>(null);
+  // const { size } = useThree();
 
-  useFrame((state) => {
-    if (!meshRef.current) return;
+  const particles = useMemo(() => {
+    const positions = new Float32Array(5000 * 3);
+    for (let i = 0; i < 5000; i++) {
+      positions[i * 3] = (Math.random() - 0.5) * 10;
+      positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
+      positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
+    }
+    return positions;
+  }, []);
 
-    // Gentle rotation animation
-    meshRef.current.rotation.x =
-      Math.sin(state.clock.getElapsedTime() * 0.3) * 0.1;
-    meshRef.current.rotation.y =
-      Math.sin(state.clock.getElapsedTime() * 0.2) * 0.1 +
-      state.clock.getElapsedTime() * 0.1;
-    meshRef.current.rotation.z =
-      Math.sin(state.clock.getElapsedTime() * 0.4) * 0.1;
+  useFrame(({ clock }) => {
+    if (pointsRef.current) {
+      pointsRef.current.rotation.y = clock.getElapsedTime() * 0.02;
+    }
   });
 
   return (
-    <Float speed={2} rotationIntensity={0.7} floatIntensity={1.2}>
-      <mesh ref={meshRef} position={[0, 0, 0]} scale={viewport.width / 10}>
-        <octahedronGeometry args={[1, 0]} />
-        <meshStandardMaterial
-          color="#FFD700"
-          roughness={0.4}
-          metalness={0.3}
-          wireframe
-        />
-      </mesh>
-    </Float>
+    <Points ref={pointsRef} positions={particles} stride={3} frustumCulled>
+      <pointsMaterial size={0.02} color="white" opacity={0.8} transparent />
+    </Points>
   );
 }
 
 export function HeroScene() {
-  const { theme } = useTheme();
-  const isDarkMode = theme === "dark";
-
   return (
     <div className="w-full h-full">
-      <Canvas
-        camera={{ position: [0, 0, 10], fov: 45 }}
-        dpr={[1, 2]}
-        style={{ background: "transparent" }}
-      >
-        <ambientLight intensity={isDarkMode ? 0.5 : 0.7} />
-        <spotLight
-          position={[10, 10, 10]}
-          angle={0.15}
-          penumbra={1}
-          intensity={isDarkMode ? 1.2 : 1.5}
-          castShadow
-        />
-        <pointLight
-          position={[-10, -10, -10]}
-          intensity={isDarkMode ? 0.6 : 0.8}
-        />
-
-        <CustomGeometry />
-
-        <Environment preset={isDarkMode ? "night" : "studio"} />
+      <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+        <ParticleSystem />
         <OrbitControls
           enableZoom={false}
           enablePan={false}
-          enableRotate={false}
-          autoRotate={true}
+          autoRotate
           autoRotateSpeed={0.5}
+          mouseButtons={{
+            LEFT: THREE.MOUSE.ROTATE,
+            MIDDLE: THREE.MOUSE.DOLLY,
+            RIGHT: THREE.MOUSE.PAN,
+          }}
         />
       </Canvas>
     </div>

@@ -21,26 +21,24 @@ export default function Home() {
       }`}
     >
       {/* Navigation Overlay */}
-      <Navigation menuOpen={menuOpen} onClick={() => setMenuOpen(false)} />
+      <Navigation
+        menuOpen={menuOpen}
+        onClick={() => setMenuOpen((prev) => !prev)}
+      />
 
       {/* Header */}
-      <Header menuOpen={menuOpen} onClick={() => setMenuOpen(!menuOpen)} />
+      <Header
+        menuOpen={menuOpen}
+        onClick={() => setMenuOpen((prev) => !prev)}
+      />
 
       <main>
-        {/* Hero Section */}
         <Herosection />
-        {/* About Section */}
         <About />
-        {/* Projects Section */}
         <ProjectSection />
-        {/* Skills Section */}
         <SkillsSection />
-
-        {/* Philosophy Section */}
         <PhilosophySection />
-        {/* Contact Section */}
         <Contact />
-        {/* Footer */}
         <Footer />
       </main>
     </div>

@@ -4,7 +4,7 @@ export const projects = [
     title: "Lynzhair",
     description:
       "Lynzhair. A full-featured online store with cart functionality, user authentication, admin-dashboard, and payment processing.",
-    year: "2023",
+    year: "2025",
     tags: [
       "Next.js",
       "TypeScript",
@@ -49,7 +49,7 @@ export const projects = [
     id: 4,
     title: "Timeless-interior-home",
     description:
-      "Timeless-interior-home. A full-featured online store with cart functionality, user authentication, Sanity CMS, and payment processing.",
+      "Timeless-interior-home. A full-featured online store, user authentication, Sanity CMS, and payment processing.",
     year: "2023",
     tags: [
       "Next.js",

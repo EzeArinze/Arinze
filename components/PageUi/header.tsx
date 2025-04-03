@@ -1,5 +1,5 @@
 import { ThemeToggle } from "@/hooks/toggle";
-import { Menu } from "lucide-react";
+// import { Menu } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -25,7 +25,7 @@ function Header({ menuOpen, onClick }: HeaderProps) {
             <span className="text-sm uppercase tracking-widest group-hover:text-primary transition-colors duration-300">
               {menuOpen ? "Close" : "Menu"}
             </span>
-            <Menu className="h-5 w-5 group-hover:text-primary transition-colors duration-300" />
+            {/* <Menu className="h-5 w-5 group-hover:text-primary transition-colors duration-300" /> */}
           </button>
         </div>
       </div>

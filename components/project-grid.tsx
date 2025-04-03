@@ -45,7 +45,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-500 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/70 transition-colors duration-300"></div>
           </div>
 
           <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
@@ -75,7 +75,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs px-2 py-1 bg-white/10 text-white/90 rounded"
+                    className="text-xs px-2 py-1 bg-white/20 text-white/90 rounded"
                   >
                     {tag}
                   </span>
