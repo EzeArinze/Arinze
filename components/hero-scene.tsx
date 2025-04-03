@@ -4,11 +4,13 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { OrbitControls, Points } from "@react-three/drei";
 import { useRef, useMemo } from "react";
+import { useTheme } from "next-themes";
 
 // Particles Animation
 function ParticleSystem() {
   const pointsRef = useRef<THREE.Points>(null);
-  // const { size } = useThree();
+  const { theme } = useTheme();
+  const isDarkMode = theme === "dark";
 
   const particles = useMemo(() => {
     const positions = new Float32Array(5000 * 3);
@@ -28,7 +30,19 @@ function ParticleSystem() {
 
   return (
     <Points ref={pointsRef} positions={particles} stride={3} frustumCulled>
-      <pointsMaterial size={0.02} color="white" opacity={0.8} transparent />
+      <pointsMaterial
+        size={0.04}
+        color={isDarkMode ? "white" : "gray"}
+        opacity={0.7}
+        transparent
+        sizeAttenuation
+        depthWrite={false}
+        blending={THREE.AdditiveBlending}
+        map={new THREE.TextureLoader().load(
+          "https://threejs.org/examples/textures/sprites/disc.png"
+        )}
+        alphaTest={0.5}
+      />
     </Points>
   );
 }
@@ -36,7 +50,10 @@ function ParticleSystem() {
 export function HeroScene() {
   return (
     <div className="w-full h-full">
-      <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+      <Canvas
+        camera={{ position: [0, 0, 5], fov: 45 }}
+        style={{ background: "transparent" }}
+      >
         <ParticleSystem />
         <OrbitControls
           enableZoom={false}

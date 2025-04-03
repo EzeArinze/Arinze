@@ -6,7 +6,7 @@ import Link from "next/link";
 
 function Herosection() {
   return (
-    <section className="relative h-screen flex items-center overflow-hidden">
+    <section className="relative h-dvh flex items-center overflow-hidden">
       <div className="absolute inset-0 z-10">
         <HeroScene />
       </div>
