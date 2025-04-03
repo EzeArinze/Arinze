@@ -13,6 +13,7 @@ interface Project {
   year: string;
   tags: string[];
   image: string;
+  link: string;
 }
 
 interface ProjectGridProps {
@@ -82,7 +83,8 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
               </div>
 
               <Link
-                href="#"
+                href={project?.link}
+                target="_blank"
                 className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-white hover:text-primary transition-colors duration-300"
               >
                 <span>View Project</span>
