@@ -16,7 +16,7 @@ export const projects = [
       "Paystack",
     ],
     link: "https://lynzhair.vercel.app/",
-    image: "/lynzhair.png",
+    image: "/newLynn.webp",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ export const projects = [
       "styled-component",
     ],
     link: "https://the-wild-oasis-omega-fawn.vercel.app/",
-    image: "/wild2.png",
+    image: "/wild2.webp",
   },
   {
     id: 3,
@@ -61,7 +61,7 @@ export const projects = [
       "Paystack",
     ],
     link: "https://timeless-home-style.vercel.app/",
-    image: "/timelesshome1.png",
+    image: "/timelesshome1.webp",
   },
   {
     id: 5,
