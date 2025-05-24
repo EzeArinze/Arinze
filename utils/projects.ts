@@ -69,7 +69,16 @@ export const projects = [
     description:
       "LeetCoach is a platform designed to help you understand and solve LeetCode problems effectively.",
     year: "2025",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Supabase", "supabase-auth"],
+    tags: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "supabase-auth",
+      "open-router-ai",
+      "code-mirror",
+      "judge0",
+    ],
     link: "https://leet-coach-platform.vercel.app/",
     image: "/leetCoach.webp",
   },
