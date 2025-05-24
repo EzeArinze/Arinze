@@ -63,4 +63,14 @@ export const projects = [
     link: "https://timeless-home-style.vercel.app/",
     image: "/timelesshome1.png",
   },
+  {
+    id: 5,
+    title: "leetCoach",
+    description:
+      "LeetCoach is a platform designed to help you understand and solve LeetCode problems effectively.",
+    year: "2025",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Supabase", "supabase-auth"],
+    link: "https://leet-coach-platform.vercel.app/",
+    image: "/leetCoach.webp",
+  },
 ];
